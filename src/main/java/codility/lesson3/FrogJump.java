@@ -4,11 +4,9 @@ public class FrogJump {
 
     public int solution(int X, int Y, int D) {
         // write your code in Java SE 8
-        int jumps = (Y - X) / D;
-
-        if(X + jumps * D < Y) {
-            return jumps + 1;
+        if((Y - X) % D == 0) {
+            return (Y - X) / D;
         }
-        return jumps;
+        return (Y - X) / D + 1;
     }
 }
